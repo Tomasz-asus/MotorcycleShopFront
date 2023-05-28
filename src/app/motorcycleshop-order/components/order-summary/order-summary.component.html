@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div>Shipment Address </div>
+  <div class="modal-body">
+    <form (ngSubmit)="onSubmit()" [formGroup]="orderForm" class="form col-md-12 center-block">
+
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="firstAndLastName" placeholder="First and last Name" type="text">
+        <div *ngIf="hasMinLengthError()" class="error">Min length is 5</div>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="street" placeholder="Street" type="text">
+      </div>
+
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="postal" placeholder="Postal Code" type="text">
+        <div *ngIf="hasMinPatternError()" class="error">NN-NNN</div>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="city" placeholder="City" type="text">
+      </div>
+
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="phoneNumber" placeholder="Phone Number" type="text">
+        <div *ngIf="hasPhoneNumberError()" class="error">Phone Number Invalid</div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary btn-lg btn-block">Send Order</button>
+      </div>
+
+    </form>
+  </div>
+  <div class="modal-footer">
+    <div class="col-md-12">
+      <button aria-hidden="true" class="btn-default img-rounded" (click)="onCancel()" data-dismiss="modal" type="submit">Cancel</button>
+    </div>
+  </div>
+</div>
+
+

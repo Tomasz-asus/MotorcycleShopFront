@@ -1,0 +1,21 @@
+button {
+  margin: 0px 10px 0px 10px;
+}
+
+.mb {
+  margin: 20px;
+  color: #fff;
+}
+
+td {
+  margin: 0px auto;
+}
+
+.container-basket{
+  width: 80%;
+  margin-top: 8em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+}

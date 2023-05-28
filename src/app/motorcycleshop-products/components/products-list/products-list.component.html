@@ -1,0 +1,3 @@
+<div class="container-products">
+  <app-product-card (onDoneClick)="addItem($event)" *ngFor="let product of products|async" [product]="product"></app-product-card>
+</div>

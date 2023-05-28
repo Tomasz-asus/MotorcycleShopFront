@@ -1,0 +1,21 @@
+
+<div class="card">
+  <img src="{{product?.imageURL}}" class="card-img-top" alt="{{product?.productName}}">
+  <div class="card-body">
+    <h5 style="text-align: center" class="card-title">{{product?.productName}}</h5>
+    <p style="text-align: center" class="card-text">$ {{product?.productPrice}}</p>
+
+    <a *ngIf="tokenStorage.isLoggedIn() && !(isProductInBasket$ | async)" (click)="doneClick()"
+       class="btn btn-success">Add
+      to cart</a>
+
+    <a style="background-color: #6d7a83; border: #6d7a83"
+       *ngIf="!tokenStorage.isLoggedIn()" (click)="toLogWindowClick()"
+       class="btn btn-success">Login to add</a>
+
+    <a style="background-color: #6d7a83; border: #6d7a83"
+       *ngIf="tokenStorage.isLoggedIn() && (isProductInBasket$ | async)"
+       class="btn btn-success">In cart</a>
+
+  </div>
+</div>

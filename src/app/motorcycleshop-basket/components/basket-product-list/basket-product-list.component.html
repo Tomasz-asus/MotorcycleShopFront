@@ -1,0 +1,47 @@
+<div class="container-basket">
+  <table class="table table-light table-hover table-sm">
+    <caption>
+      Products ({{motorcycleshopService.counter|async}} items)
+    </caption>
+    <thead>
+    <tr>
+      <th scope="col">Item</th>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Price</th>
+      <th scope="col"></th>
+      <th scope="col">TOTAL</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products|async">
+      <td><img class="img-responsive image" style="max-height: 3em" src="{{product.imageURL}}"></td>
+      <td>{{ product.productName }}</td>
+      <td>{{ product.category }}</td>
+      <td>{{ product.productPrice }}</td>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="details(product)">Details</button>
+        <button type="button" class="btn btn-danger" (click)="onItemDelete(product)">
+          Delete
+        </button>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td style="font-size: 1.5em">$ {{products | async | sum}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button *ngIf="!motorcycleshopService.isBasketEmpty()" (click)="onSubmit()" type="button" class="btn btn-success mb order-btn">
+    <i class="fas fa-plus-circle"></i> Make Order
+  </button>
+  <button style="background-color: #6d7a83; border: #6d7a83" *ngIf="motorcycleshopService.isBasketEmpty()" type="button"
+          class="btn btn-success mb order-btn">
+    <i class="fas fa-plus-circle"></i> No Items
+  </button>
+</div>

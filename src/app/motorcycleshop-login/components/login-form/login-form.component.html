@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="modal-body">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form" class="form col-md-12 center-block">
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="username" placeholder="Email" type="text">
+        <div *ngIf="hasRequiredError()" class="error">Is required</div>
+      </div>
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="password" placeholder="Password" type="password">
+        <div *ngIf="hasPasswordRequiredError()" class="error">Is required</div>
+      </div>
+      <div class="form-group">
+        <button *ngIf="!tokenStorage.isLoggedIn() && form.valid"
+                class="btn btn-primary btn-lg btn-block">Sign In
+        </button>
+        <button *ngIf="!tokenStorage.isLoggedIn() && !form.valid" style="background-color: grey; border: grey"
+                class="btn btn-primary btn-lg btn-block">Sign In
+        </button>
+        <span style="font-size: 1.5rem" class="pull-right"><a (click)="OnRegister()"
+                                                              class="reg-link">Register</a></span>
+        <span><a style="font-size: 1.5rem" *ngIf="tokenStorage.isLoggedIn()" (click)="onLogOut()" class="reg-link">Log Out</a></span>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal-footer">
+    <div class="col-md-12">
+      <button (click)="onCancel()" aria-hidden="false" class="btn-default img-rounded" data-dismiss="modal"
+              type="submit">
+        Cancel
+      </button>
+    </div>
+  </div>
+  <app-loading-spinner *ngIf="auth.isLoading$|async">Is loading...</app-loading-spinner>
+  <div style="text-align: center" class="alert alert-warning " role="alert" *ngIf="errorSubmit">
+    {{ errorMessage }}
+  </div>
+</div>

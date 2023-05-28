@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="modal-body">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form" class="form col-md-12 center-block">
+
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="name" placeholder="Name" type="text">
+        <div *ngIf="hasMinLengthError()" class="error">Min length is 5</div>
+      </div>
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="username" placeholder="Email" type="text">
+        <div *ngIf="hasEmailValidateError()" class="error">Type correct email</div>
+      </div>
+      <div class="form-group">
+        <input class="form-control input-lg" formControlName="password" placeholder="Password" type="password">
+        <div *ngIf="hasMinPatternError()" class="error">Minimum six characters, at least one letter and one number:
+        </div>
+      </div>
+      <div class="form-group">
+        <button *ngIf="form.valid" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+      </div>
+      <div class="form-group">
+        <button style="background-color: grey; border: grey" *ngIf="!form.valid"
+                class="btn btn-primary btn-lg btn-block">Sign Up
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <div class="col-md-12">
+      <button aria-hidden="true" class="btn-default img-rounded" (click)="onCancel()" data-dismiss="modal" type="submit">Cancel</button>
+    </div>
+  </div>
+  <app-loading-spinner *ngIf="authService.isLoading$|async">Is Loading...</app-loading-spinner>
+  <div style="text-align: center" class="alert alert-warning " role="alert" *ngIf="errorSubmit">
+    {{ errorMessage }}
+  </div>
+</div>
+

@@ -1,0 +1,58 @@
+<div class="mix navbar-fixed-top">
+  <nav class="navbar navbar-inverse" style="border-radius: 0">
+    <div class="container-fluid">
+      <div class="navbar-header menuitem" style="height: 7rem">
+        <a class="navbar-brand">Motorcycle Shop</a>
+      </div>
+
+      <div>
+        <ul class="nav navbar-nav">
+          <li *ngFor="let link of routes" routerLink="{{ link.route }}">
+            <a *ngIf="link.label!='Home'">{{link.label}}</a>
+            <a *ngIf="link.label=='Home'">{{link.label}}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-brand">
+        <div>
+          <app-search-bar></app-search-bar>
+        </div>
+      </div>
+
+      <div *ngIf="tokenStorage.isLoggedIn()" class="navbar-brand">
+        Hello, {{tokenStorage.getNameFromToken()}}!
+      </div>
+
+      <div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="glyphicon glyphicon-shopping-cart"></span>
+              {{ counter | async }} - Items in Cart<span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-cart" role="menu">
+              <li *ngFor="let product of products| async">
+                  <span class="item">
+                    <span class="item-left">
+                        <img style="max-width: 5rem" src="{{product?.imageURL}}" alt=""/>
+                        <span class="item-info">
+                            <span>{{product?.productName}}</span>
+                            <span>price: {{product?.productPrice}}$</span>
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <button (click)="onItemDelete(product)"
+                                class="btn btn-danger  fa fa-close">x</button>
+                    </span>
+                </span>
+              </li>
+              <li class="divider"></li>
+              <li><a class="text-center" (click)="viewCard()">View Cart</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</div>

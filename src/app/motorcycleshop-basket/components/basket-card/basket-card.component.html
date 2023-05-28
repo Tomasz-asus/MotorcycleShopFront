@@ -1,0 +1,22 @@
+<div class="card mb-2 ">
+  <div class="card-body ">
+    <div class="d-flex flex-column flex-lg-row gap-2">
+      <img src="{{product?.imageURL}}" alt="194x228" class="img-responsive image" style="max-height: 200px">
+      <div class="row flex-wrap">
+        <div class="col-sm-4">
+          <h2 class="text-info">{{product?.productName}}</h2>
+        </div>
+        <div class="col-sm-4 py-5">
+          <span class="badge bg-secondary">$ {{[product?.productPrice]}}</span>
+          <span class="badge bg-secondary">{{[product?.productDescription]}}</span>
+
+        </div>
+        <div class="col-sm-3 text-lg-end">
+          <a class="btn btn-primary stretched-link" (click)="doneClick()">DELETE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

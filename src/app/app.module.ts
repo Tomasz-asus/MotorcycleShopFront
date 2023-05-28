@@ -18,15 +18,12 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LoadingInterceptorService} from "./auth/services/loading-interceptor.service";
 
-
 export function tokenGetter() {
   return localStorage.getItem("access_token");
 }
-
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -46,8 +43,9 @@ export function tokenGetter() {
       config: {
         tokenGetter: tokenGetter,
         allowedDomains: ["localhost:8080"],
-        disallowedRoutes: ["http://localhost:8080/api/login", "http://localhost:8080/shop/products",
-          "http://localhost:8080/api/user"],
+        disallowedRoutes: ["http://localhost:8080/api/login",
+                            "http://localhost:8080/shop/products",
+                            "http://localhost:8080/api/user"],
         throwNoTokenError: true,
       },
     }),
