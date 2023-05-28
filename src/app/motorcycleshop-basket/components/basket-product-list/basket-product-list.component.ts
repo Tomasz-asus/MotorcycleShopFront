@@ -24,9 +24,9 @@ export class BasketProductListComponent implements OnInit{
   onItemDelete = (product: Product) => {
     this.motorcycleshopService.removeFromBasket(product);
   }
-
-  details(product: Product) {
-  }
+  //
+  // details(product: Product) {
+  // }
 
   onSubmit() {
     this.router.navigateByUrl(RoutesConfig.orderForm);
