@@ -25,7 +25,7 @@ export class AuthenticationService {
     return this.http.post<any>(`${environment.authEndpoint}login`, params);
 
   }
-
+//TODO
     register(name: string | null | undefined, username: string | null | undefined, password: string | null | undefined) {
     let user: User = {
       id: null,
