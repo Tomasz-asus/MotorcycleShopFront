@@ -1,14 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {AuthenticationService} from "../../../auth/services/authentication.service";
-import {Router} from "@angular/router";
-import {RoutesConfig} from "../../../app-routing.module";
-import {map, switchMap, tap} from "rxjs";
-import {AuthResponse} from "../../../auth/model/authResponse";
-import {TokenStorageService} from "../../../auth/services/token-storage.service";
-import {JwtHelperService} from "@auth0/angular-jwt";
-import {MotorcycleshopService} from "../../../api/service/motorcycleshop.service";
-import {HttpErrorResponse} from "@angular/common/http";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {AuthenticationService} from '../../../auth/services/authentication.service';
+import {Router} from '@angular/router';
+import {RoutesConfig} from '../../../app-routing.module';
+import {map, switchMap, tap} from 'rxjs';
+import {AuthResponse} from '../../../auth/model/authResponse';
+import {TokenStorageService} from '../../../auth/services/token-storage.service';
+import {JwtHelperService} from '@auth0/angular-jwt';
+import {MotorcycleshopService} from '../../../api/service/motorcycleshop.service';
+import {HttpErrorResponse} from '@angular/common/http';
 
 
 @Component({

@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Product} from "../model/product";
-import {environment} from "../../../environments/environment";
+import {HttpClient} from '@angular/common/http';
+import {Product} from '../model/product';
+import {environment} from '../../../environments/environment';
 import {BehaviorSubject, map, Observable, tap} from 'rxjs';
-import {TokenStorageService} from "../../auth/services/token-storage.service";
-import {Order} from "../model/order";
+import {TokenStorageService} from '../../auth/services/token-storage.service';
+import {Order} from '../model/order';
 
 @Injectable({
   providedIn: 'root'

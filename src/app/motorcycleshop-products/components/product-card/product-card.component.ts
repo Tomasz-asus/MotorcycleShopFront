@@ -1,10 +1,10 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Product} from "../../../api/model/product";
-import {TokenStorageService} from "../../../auth/services/token-storage.service";
-import {Router} from "@angular/router";
-import {RoutesConfig} from "../../../app-routing.module";
-import {MotorcycleshopService} from "../../../api/service/motorcycleshop.service";
-import {Observable} from "rxjs";
+import {Product} from '../../../api/model/product';
+import {TokenStorageService} from '../../../auth/services/token-storage.service';
+import {Router} from '@angular/router';
+import {RoutesConfig} from '../../../app-routing.module';
+import {MotorcycleshopService} from '../../../api/service/motorcycleshop.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-product-card',

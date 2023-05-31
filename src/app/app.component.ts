@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {RoutesConfig} from "./app-routing.module";
-import {MotorcycleshopService} from "./api/service/motorcycleshop.service";
-import {TokenStorageService} from "./auth/services/token-storage.service";
+import {RoutesConfig} from './app-routing.module';
+import {MotorcycleshopService} from './api/service/motorcycleshop.service';
+import {TokenStorageService} from './auth/services/token-storage.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

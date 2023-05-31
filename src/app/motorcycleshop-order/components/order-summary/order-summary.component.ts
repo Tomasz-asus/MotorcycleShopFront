@@ -1,14 +1,14 @@
 import {Component} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
-import {MotorcycleshopService} from "../../../api/service/motorcycleshop.service";
-import {RoutesConfig} from "../../../app-routing.module";
-import {Order} from "../../../api/model/order";
-import {TokenStorageService} from "../../../auth/services/token-storage.service";
-import {AuthenticationService} from "../../../auth/services/authentication.service";
-import {map, switchMap, tap} from "rxjs";
-import {AuthResponse} from "../../../auth/model/authResponse";
-import {HttpErrorResponse} from "@angular/common/http";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {MotorcycleshopService} from '../../../api/service/motorcycleshop.service';
+import {RoutesConfig} from '../../../app-routing.module';
+import {Order} from '../../../api/model/order';
+import {TokenStorageService} from '../../../auth/services/token-storage.service';
+import {AuthenticationService} from '../../../auth/services/authentication.service';
+import {map, switchMap, tap} from 'rxjs';
+import {AuthResponse} from '../../../auth/model/authResponse';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-order-summary',

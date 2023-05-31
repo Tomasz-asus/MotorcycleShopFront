@@ -6,4 +6,4 @@ export interface User {
   roles: [];
 }
 
-//TODO typy bez ""
+

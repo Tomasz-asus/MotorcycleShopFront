@@ -1,10 +1,10 @@
 import {Component, Input} from '@angular/core';
-import {Product} from "../../../api/model/product";
-import {Observable} from "rxjs";
-import {MotorcycleshopService} from "../../../api/service/motorcycleshop.service";
-import {TokenStorageService} from "../../../auth/services/token-storage.service";
-import {Router} from "@angular/router";
-import {RoutesConfig} from "../../../app-routing.module";
+import {Product} from '../../../api/model/product';
+import {Observable} from 'rxjs';
+import {MotorcycleshopService} from '../../../api/service/motorcycleshop.service';
+import {TokenStorageService} from '../../../auth/services/token-storage.service';
+import {Router} from '@angular/router';
+import {RoutesConfig} from '../../../app-routing.module';
 
 @Component({
   selector: 'app-motorcycleshop-navbar',

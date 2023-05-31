@@ -1,8 +1,8 @@
-import {TokenStorageService} from "./token-storage.service";
-import {RoutesConfig} from "../../app-routing.module";
-import {MotorcycleshopService} from "../../api/service/motorcycleshop.service";
-import {Injectable} from "@angular/core";
-import {CanActivate, Router} from "@angular/router";
+import {TokenStorageService} from './token-storage.service';
+import {RoutesConfig} from '../../app-routing.module';
+import {MotorcycleshopService} from '../../api/service/motorcycleshop.service';
+import {Injectable} from '@angular/core';
+import {CanActivate, Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'

@@ -16,7 +16,7 @@ export class AuthenticationService {
   setLoading(isLoading: boolean) {
     this.isLoading$$.next(isLoading);
   }
-  //TODO emergency change string | null | undefined to any nut it is not correct
+
   login(mail: any, password: any) {
     const params = new HttpParams()
       .set('username', mail)

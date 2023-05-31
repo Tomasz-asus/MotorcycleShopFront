@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {MotorcycleshopService} from "../../../api/service/motorcycleshop.service";
-import {Product} from "../../../api/model/product";
-import {Observable} from "rxjs";
+import {MotorcycleshopService} from '../../../api/service/motorcycleshop.service';
+import {Product} from '../../../api/model/product';
+import {Observable} from 'rxjs';
 import {JwtHelperService} from '@auth0/angular-jwt';
 
 @Component({

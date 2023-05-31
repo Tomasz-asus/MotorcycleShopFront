@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MotorcycleshopHomePageComponent implements OnInit {
 
-  path: string = "assets/images/motorcycleshop_banner.jpg";
-  altText: string = "first image"
+  path: string = 'assets/images/motorcycleshop_banner.jpg';
+  altText: string = 'first image'
 
   constructor() { }
 

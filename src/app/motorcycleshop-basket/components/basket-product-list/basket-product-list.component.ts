@@ -30,9 +30,6 @@ export class BasketProductListComponent implements OnInit {
     return;
   }
 
-  details(product: Product) {
-  }
-
   onSubmit() {
     this.router.navigateByUrl(RoutesConfig.orderForm);
   }

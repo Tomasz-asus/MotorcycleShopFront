@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {FormControl} from "@angular/forms";
-import {debounceTime} from "rxjs";
-import {MotorcycleshopService} from "../../../api/service/motorcycleshop.service";
-import {Router} from "@angular/router";
-import {RoutesConfig} from "../../../app-routing.module";
+import {FormControl} from '@angular/forms';
+import {debounceTime} from 'rxjs';
+import {MotorcycleshopService} from '../../../api/service/motorcycleshop.service';
+import {Router} from '@angular/router';
+import {RoutesConfig} from '../../../app-routing.module';
 
 @Component({
   selector: 'app-search-bar',
