@@ -1,9 +1,11 @@
 .container {
   height: 100vh;
   width: 100vw;
-  background-color: aqua;
+  margin-top: 20px;
+  background-color: lightskyblue;
   background-image: url("../../../../assets/images/motorcycleshop_banner.jpg");
-  background-position: center center;
-  background-attachment: fixed;
+  background-position: right center;
+  background-size: cover;
+  background-attachment:fixed;
 }
 
