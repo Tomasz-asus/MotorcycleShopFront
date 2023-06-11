@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./motorcycleshop-login-page.component.css']
 })
 export class MotorcycleshopLoginPageComponent implements OnInit {
-  // path: string = "assets/images/motorcycleshop_banner.jpg";
-  // altText: string = "first image"
+
   constructor() { }
 
   ngOnInit(): void {
